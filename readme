@@ -1,0 +1,42 @@
+
+
+npm install express mysql2 bcryptjs jsonwebtoken body-parser dotenv nodemon
+
+
+
+CREATE DATABASE property_db;
+
+USE property_db;
+
+-- Table to store user details
+CREATE TABLE users (
+  id INT AUTO_INCREMENT PRIMARY KEY,
+  username VARCHAR(255) NOT NULL,
+  firstname VARCHAR(255) NOT NULL,
+  lastname VARCHAR(255) NOT NULL,
+  email VARCHAR(255) UNIQUE NOT NULL,
+  password VARCHAR(255) NOT NULL,
+  mobile VARCHAR(15),
+  city VARCHAR(100),
+  state VARCHAR(100),
+  country VARCHAR(100),
+  latitude FLOAT,
+  longitude FLOAT
+);
+
+-- Table to store properties
+CREATE TABLE properties (
+  id INT AUTO_INCREMENT PRIMARY KEY,
+  title VARCHAR(255) NOT NULL,
+  description TEXT,
+  lat FLOAT,
+  lng FLOAT,
+  image VARCHAR(255),
+  price DECIMAL(10, 2),
+  bedroom INT,
+  bathroom INT,
+  garage INT,
+  city VARCHAR(100),
+  state VARCHAR(100),
+  country VARCHAR(100)
+);
