@@ -3,6 +3,13 @@
 npm install express mysql2 bcryptjs jsonwebtoken body-parser dotenv nodemon
 
 
+DB_HOST=localhost
+DB_USER=root
+DB_PASSWORD=''
+DB_NAME=property_db
+JWT_SECRET=your-secret-key
+
+
 
 CREATE DATABASE property_db;
 
